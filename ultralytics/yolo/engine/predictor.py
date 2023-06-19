@@ -270,7 +270,7 @@ class BasePredictor:
                 if self.args.verbose or self.args.save or self.args.save_txt or self.args.show:
                     s += self.write_results(i, self.results, (p, im, im0))
 
-                if self.args.show and self.plotted_img is not None:
+                if self.args.show and not self.plotted_img:
                     if (self.fps == None):  # TEST
                         self.fps = [None] * n  # TEST
                         self.ifps = [None] * n  # TEST
